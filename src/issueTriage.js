@@ -111,7 +111,7 @@ class ActionIssueTriage {
       '%DAYS_OLD%',
       this._getDaysSince(issue.updated_at)
     );
-    message = message.replace('%AUTHOR%', issue.user.login);
+    message = message.replace('%AUTHOR%', issue.assignee.login);
 
     return message;
   }
